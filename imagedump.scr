@@ -1,0 +1,34 @@
+run drill-exactsize;
+
+DISPLAY ALL
+RATSNEST
+
+DISPLAY None Top Pads Vias;
+EXPORT IMAGE tc.png MONOCHROME 2400;
+
+DISPLAY None Bottom Pads Vias;
+EXPORT IMAGE bc.png MONOCHROME 2400;
+
+SET FILL_LAYER tStop 1;
+DISPLAY None tStop;
+EXPORT IMAGE tm.png MONOCHROME 2400;
+
+SET FILL_LAYER bStop 1;
+DISPLAY None bStop;
+EXPORT IMAGE bm.png MONOCHROME 2400;
+
+DISPLAY None tPlace -tOrigins tNames -tValues -tDocu;
+EXPORT IMAGE ts.png MONOCHROME 2400;
+
+DISPLAY None bPlace -bOrigins bNames -bValues -bDocu;
+EXPORT IMAGE bs.png MONOCHROME 2400;
+
+SET FILL_LAYER drillImage 1;
+DISPLAY None drillImage
+EXPORT IMAGE dr.png MONOCHROME 2400;
+
+DISPLAY None Dimension;
+EXPORT IMAGE ol.png MONOCHROME 2400;
+
+DISPLAY ALL
+

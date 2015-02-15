@@ -1,0 +1,66 @@
+[CAM Processor Job]
+Section=Sec_1
+Section=Sec_2
+Section=Sec_3
+Section=Sec_4
+Section=Sec_5
+Section=Sec_6
+Section=Sec_7
+Section=Sec_8
+
+[Sec_1]
+Name="drill"
+Device="EXCELLON"
+Output="%N.TXT"
+Flags="0 0 0 1 0 0 1"
+Layers=" 44 45"
+
+[Sec_2]
+Name="outline drill"
+Device="GERBER_RS274X"
+Output="%N.DO"
+Flags="0 0 0 1 0 1 1"
+Layers=" 20 44 45"
+
+[Sec_3]
+Name="bottom stop"
+Device="GERBER_RS274X"
+Output="%N.GBS"
+Flags="0 0 0 1 0 1 1"
+Layers=" 30"
+
+[Sec_4]
+Name="top stop"
+Device="GERBER_RS274X"
+Output="%N.GTS"
+Flags="0 0 0 1 0 1 1"
+Layers=" 29"
+
+[Sec_5]
+Name="bottom silk"
+Device="GERBER_RS274X"
+Output="%N.GBO"
+Flags="0 0 0 1 0 1 1"
+Layers=" 22 26"
+
+[Sec_6]
+Name="top silk"
+Device="GERBER_RS274X"
+Output="%N.GTO"
+Flags="0 0 0 1 0 1 1"
+Layers=" 21 25"
+
+[Sec_7]
+Name="bottom copper"
+Device="GERBER_RS274X"
+Output="%N.GBL"
+Flags="0 0 0 1 0 1 1"
+Layers=" 16 17 18"
+
+[Sec_8]
+Name="top copper"
+Device="GERBER_RS274X"
+Output="%N.GTL"
+Flags="0 0 0 1 0 1 1"
+Layers=" 1 17 18"
+
